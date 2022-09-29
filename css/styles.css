@@ -333,6 +333,7 @@ footer {
   font-style: normal;
 }
 .img-portfolio > a > h3 {
+  text-transform: none;
   padding: 10px 30px 0;
 }
 .img-portfolio > a > p {
