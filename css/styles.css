@@ -26,13 +26,13 @@
 ▐░░░▀▀█████▀▀░░▒▀███▌███▄░░░░░░░░░░░░░░░░░░▌
 ▐░░░░░░░░░░░░░░░░░▀██▌████░░░░░░░░░░░░░░░░░▌
 ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-
 Аня :)
   */
 body {
   font-family: "Raleway", sans-serif;
   font-family: "Roboto", sans-serif;
   height: 100%;
+  background-color: white;
 }
 
 .list {
