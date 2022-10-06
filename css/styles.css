@@ -1,69 +1,54 @@
-/* Изменения внесла, но если мой код все еще плох -
-то этот ночной котик должен смягчить мое положение:
-
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-¶¶¶1¶1___¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶_______¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶1¶¶¶¶¶¶¶__¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶_______1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_____1_____¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶1_______¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶__________¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶1_______¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶__________¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶_______1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_______¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶_______¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶1¶¶1_________¶¶¶¶¶
-¶¶¶¶1¶________1¶¶¶¶¶¶¶¶¶¶¶¶¶_________________¶¶¶¶¶
-¶¶¶¶¶1__11¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶___________________¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶1_____________________¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶______________________¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶1¶¶¶¶¶¶¶¶¶¶_____________________¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_____________________1¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶1____________________1¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_____________________¶¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶1_____________________¶¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_______________1¶¶¶1__¶¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶1______________¶¶¶¶¶¶__1¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_______________¶¶¶¶¶¶¶___¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶_________________¶¶¶¶¶¶¶¶___1¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶____1¶¶¶¶______________¶¶¶¶¶¶¶__¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶____¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶11¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-
-Выздоравливайте, Андрей, жду дополнительных комментариев
-и правок.
-Аня :)
-  */
+/* Я все таки сделала разные контейнеры для футера и для хедера.
+Но если нужно чтобы был только один для всех блоков - могу поменять.
+Не судите строго :) 
+Аня */
 
 body {
   font-family: "Roboto", sans-serif;
   height: 100%;
   background-color: white;
 }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+.container-header {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 
 .list {
   list-style: none;
 }
-.page-header {
-  padding-top: 10px;
-  width: 100%;
-  height: 10px;
-  position: relative;
-  display: inline-flex;
-}
+
 .header-logo {
   text-decoration: none;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  /* identical to box height */
   letter-spacing: 0.03em;
   color: #000;
-  margin: 10px 43px 0 215px;
 }
 
 .header-link {
@@ -80,8 +65,9 @@ body {
 }
 
 .header-nav {
+  box-sizing: border-box;
+  padding-left: 90px;
   display: inline-flex;
-  justify-content: flex-start;
   gap: 50px;
 }
 
@@ -89,9 +75,9 @@ body {
   display: inline; /* Отображать как строчный элемент */
 }
 .header-contacts {
-  margin-left: 344px;
+  box-sizing: border-box;
+  padding-left: 340px;
   display: inline-flex;
-  justify-content: flex-end;
   gap: 50px;
 }
 .header-contacts-li {
@@ -110,7 +96,6 @@ body {
   color: #2196f3;
 }
 .line-header {
-  padding-bottom: 30px;
   border-bottom: 1px solid #ececec;
 }
 .main-section {
@@ -126,10 +111,11 @@ body {
   font-size: 44px;
   line-height: calc(60 / 44);
   letter-spacing: 0.06em;
-  padding-top: 200px;
   color: white;
   text-transform: uppercase;
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 40px;
 }
 .main-button {
   font-weight: 700;
@@ -148,6 +134,7 @@ body {
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
 }
 
 h2 {
@@ -199,20 +186,20 @@ p {
   color: #757575;
 }
 
-.features-section > h2 {
-  display: none;
-}
 .features-section-ul {
+  padding-top: 90px;
+  padding-bottom: 90px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   gap: 25px;
-  height: 200px;
+  height: 100px;
   width: 100%;
 }
-.features-section-li {
-  padding-top: 50px;
+
+.features-section-li > h3 {
+  padding-bottom: 10px;
 }
 
 .a-img-portfolio > h3 {
@@ -231,24 +218,24 @@ p {
   color: #757575;
 }
 .img-items > h2 {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 .img-ul {
-  margin-bottom: 94px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 30px;
+  padding-bottom: 50px;
 }
 
 .team-section {
-  padding-top: 54px;
+  padding-top: 50px;
   width: 100%;
   height: 600px;
   background: #f5f4fa;
 }
 .team-section-ul {
-  padding-top: 20px;
+  padding-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -258,31 +245,40 @@ p {
 .team-section-li {
   width: 270px;
   height: 368px;
-  left: 515px;
-  top: 1632px;
-
   background: #ffffff;
-  /* material shadow v1 */
-
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-
   display: inline-block;
 }
-.team-section-li > h3,
-.team-section-li > p {
+.team-section-li > h3 {
+  padding-top: 30px;
   text-align: center;
 }
-
-footer {
-  padding-top: 60px;
-  width: 100%;
-  height: 192px;
-  background: #2f303a;
+.team-section-li > p {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  text-align: center;
 }
+footer {
+  width: 100%;
+  height: 130px;
+  background: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.container-footer {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
 .logo-footer {
-  margin-left: 215px;
   text-decoration: none;
   font-family: "Raleway";
   font-weight: 700;
@@ -291,9 +287,7 @@ footer {
   /* identical to box height */
   letter-spacing: 0.03em;
   color: #fff;
-}
-.footer-ul {
-  margin-left: 175px;
+  padding-bottom: 20px;
 }
 
 .footer-address {
@@ -313,12 +307,19 @@ footer {
   font-size: 14px;
   line-height: 2;
   /* or 171% */
-
   letter-spacing: 0.03em;
-
   color: rgba(255, 255, 255, 0.6);
 }
-
+.container-portfolio {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
 .buttons-main-section {
   width: 1600px;
   padding-top: 100px;
@@ -381,4 +382,18 @@ footer {
 }
 .img-portfolio > a > p {
   padding: 0 30px 10px;
+}
+/* прячу заголовок */
+h2.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
